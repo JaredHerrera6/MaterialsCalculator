@@ -13,7 +13,7 @@ public class Settings extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.Settings);
+        setContentView(R.layout.settings);
         
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle("Jared's Jobs");
