@@ -33,7 +33,6 @@ public class Settings extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
         switch (item.getItemId()){
             case R.id.home:
                 Toast.makeText(this,"Home Clicked", Toast.LENGTH_SHORT).show();
