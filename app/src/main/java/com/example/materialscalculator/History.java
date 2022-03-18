@@ -9,34 +9,32 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-public class Settings extends AppCompatActivity {
+public class History extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.settings);
-
+        setContentView(R.layout.activity_history);
         //This shows the name/subname, and icon image on the  Actionbar
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle("Jared's Jobs");
-        actionBar.setSubtitle("Settings");
+        actionBar.setSubtitle("History");
         actionBar.setIcon(R.drawable.ic_subpic);
         actionBar.setDisplayUseLogoEnabled(true);
         actionBar.setDisplayShowHomeEnabled(true);
-
     }
-    // This is the code used to display the tool bar
+    // This adds our custom tool bar settings
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.toolbar,menu);
         return super.onCreateOptionsMenu(menu);
     }
-
+    // These are the navigation instructions for the toolbar selections
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.home:
-                startActivity(new Intent(getApplicationContext(),Home.class));
+                startActivity(new Intent(getApplicationContext(), Home.class));
                 break;
             case R.id.history:
                 startActivity(new Intent(getApplicationContext(),History.class));

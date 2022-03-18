@@ -9,12 +9,34 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialsCalculator">
+        <activity
+            android:name=".Brick"
+            android:exported="false" />
+        <activity
+            android:name=".Block"
+            android:exported="false" />
+        <activity
+            android:name=".Wall"
+            android:exported="false" />
+        <activity
+            android:name=".History"
+            android:exported="false" />
+        <activity
+            android:name=".Curb"
+            android:exported="false" />
+        <activity
+            android:name=".Stairs"
+            android:exported="false" />
+        <activity
+            android:name=".Slab"
+            android:exported="false" />
         <activity android:name=".Settings">
+
             <!--
           <meta-data android:name="android.support.PARENT_ACTIVITY"
               android:value=".MainActivity"/>
               * This is a comment
-              -->
+            -->
         </activity>
         <activity android:name=".Home">
             <intent-filter>
