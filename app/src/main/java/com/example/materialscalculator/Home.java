@@ -56,14 +56,38 @@ public class Home extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        // TODO: 3/18/2022 Add the rest of the Onclick for the rest of the buttons 
-        // TODO: 3/18/2022 Add the tool bar and back ground to each  
-        // TODO: 3/18/2022 Work on the interface in order to get the user input 
-
-
-
-
-
+        // Open the Curb Activity
+        BtnCurb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Curb.class);
+                startActivity(intent);
+            }
+        });
+        //Opens the Wall activity
+        BtnWall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Wall.class);
+                startActivity(intent);
+            }
+        });
+        // Opens the Block activity
+        BtnBlock.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Block.class);
+                startActivity(intent);
+            }
+        });
+        BtnBrick.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Brick.class);
+                startActivity(intent);
+            }
+        });
+        // TODO: 3/18/2022 Work on the interface in order to get the user input
     }
     // This adds our custom tool bar settings
     @Override
