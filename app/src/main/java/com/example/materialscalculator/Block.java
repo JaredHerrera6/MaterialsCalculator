@@ -17,7 +17,7 @@ public class Block extends AppCompatActivity {
         //This shows the name, sub name, and icon image on the  Actionbar
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle("Jared's Jobs");
-        actionBar.setSubtitle("Materials Calculator");
+        actionBar.setSubtitle("Block Materials Calculator");
         actionBar.setIcon(R.drawable.ic_subpic);
         actionBar.setDisplayUseLogoEnabled(true);
         actionBar.setDisplayShowHomeEnabled(true);
