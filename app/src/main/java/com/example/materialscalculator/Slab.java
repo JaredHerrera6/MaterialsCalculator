@@ -9,6 +9,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.DecimalFormat;
@@ -48,8 +50,8 @@ public class Slab extends AppCompatActivity implements View.OnClickListener {
         actionBar.setDisplayUseLogoEnabled(true);
         actionBar.setDisplayShowHomeEnabled(true);
 
-        //_Do = (Button)findViewById()
-        //_Do = setOnClickListener(this)
+        _Do = (Button)findViewById(R.id.calcButton);
+        _Do.setOnClickListener(this);
     }
     // This adds our custom tool bar settings
     @Override
@@ -76,7 +78,44 @@ public class Slab extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
+        EditText editLength = findViewById(R.id.editLength);
+        EditText editWidth = findViewById(R.id.editWidth);
+        EditText editThick = findViewById(R.id.editThickness);
+        EditText editPrice = findViewById(R.id.editPrice);
+        Length = Double.parseDouble(editLength.getText().toString());
+        width = Double.parseDouble(editWidth.getText().toString());
+        thickness = Double.parseDouble(editThick.getText().toString());
+        fPrice = Integer.parseInt(editPrice.getText().toString());
 
+        thickness = thickness/ 12; // turns thickness(inches) into feet by dividing by 12
+        cubicFeet = new CubicFeet(Length,width, thickness);
+        Cubicft = cubicFeet.getCubicft();
+
+        yrds = new ConcreteNeeded(cuFtPerUnit,Cubicft);
+        Yards = yrds.getYrds();
+        b80 = yrds.getd80();
+        b60 = yrds.getd60();
+        b40 = yrds.getd40();
+
+        sqft = cubicFeet.getSqft();
+        estimate = new Estimate(sqft,fPrice);
+        dQuote = estimate.getEstimate();
+
+        // Text view boxes
+        // Print yards
+        TextView txtYards = findViewById(R.id.txtYards);
+        txtYards.setText("Yards: " + Double.toString(Double.parseDouble(df.format(Yards))));
+        //Print 80 Lbs bags of concrete needed
+        TextView txt80 = findViewById(R.id.txtBags80);
+        txt80.setText("80Lb Bags: " + Double.toString(Double.parseDouble(df.format(b80))));
+        //Print 60 Lbs bags of concrete needed
+        TextView txt60 = findViewById(R.id.txtBags60);
+        txt60.setText("60Lb Bags: " + Double.toString(Double.parseDouble(df.format(b60))));
+        //Print 40 lbs bas of concrete needed
+        TextView txt40 = findViewById(R.id.txtBags40);
+        txt40.setText("40Lb Bags: " + Double.toString((Double.parseDouble(df.format(b40)))));
+        //Print Estimate
+        TextView txtEstimate = findViewById(R.id.txtEstimate);
+        txtEstimate.setText("Estimate: " + dfQuote.format(dQuote));
     }
-
 }
