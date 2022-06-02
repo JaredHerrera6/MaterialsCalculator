@@ -4,18 +4,150 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Stairs"
-    android:background="@drawable/gradient_background">
+    android:background="@drawable/gradient_background"
+    tools:context=".Stairs">
 
-    <TextView
-        android:id="@+id/StairsTxt"
+    <EditText
+        android:id="@+id/editWidth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Stairs"
-        android:textSize="25dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="40dp"
+        android:ems="8"
+        android:hint="Width(Ft):"
+        android:inputType="number"
+        android:minHeight="48dp"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textColorHint="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editRise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:ems="8"
+        android:hint="Rise(In.):"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toEndOf="@+id/editWidth"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editRun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:ems="8"
+        android:hint="Run(In.):"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/editWidth"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/editWidth"
+        app:layout_constraintTop_toBottomOf="@+id/editWidth" />
+
+    <EditText
+        android:id="@+id/editSteps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:ems="8"
+        android:hint="Steps:"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/editRise"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editRise"
+        app:layout_constraintTop_toBottomOf="@+id/editRise" />
+
+    <EditText
+        android:id="@+id/editPlatformD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="196dp"
+        android:ems="8"
+        android:hint="PlatFormDepth(Ft)"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/editSteps"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="@+id/editRun"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/calcButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Calculate"
+        app:layout_constraintEnd_toEndOf="@+id/editPlatformD"
+        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintStart_toStartOf="@+id/editPlatformD"
+        app:layout_constraintTop_toBottomOf="@+id/editPlatformD" />
+
+    <TextView
+        android:id="@+id/txtYards"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Yards:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/calcButton"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calcButton" />
+
+    <TextView
+        android:id="@+id/txtBags80"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="80Lb:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtYards"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txtYards"
+        app:layout_constraintTop_toBottomOf="@+id/txtYards" />
+
+    <TextView
+        android:id="@+id/txtBags60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="60Lb:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtBags80"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txtBags80"
+        app:layout_constraintTop_toBottomOf="@+id/txtBags80" />
+
+    <TextView
+        android:id="@+id/txtBags40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="40Lb:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtBags60"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txtBags60"
+        app:layout_constraintTop_toBottomOf="@+id/txtBags60" />
+
+
 </android.support.constraint.ConstraintLayout>
