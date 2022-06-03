@@ -11,89 +11,150 @@
         android:id="@+id/editWidth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="40dp"
-        android:ems="8"
-        android:hint="Width(Ft):"
+        android:ems="4"
         android:inputType="number"
         android:minHeight="48dp"
         android:textColor="@color/white"
-        android:textColorHint="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/WidthTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Width(Ft):"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/editWidth"
+        app:layout_constraintEnd_toStartOf="@+id/editWidth"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editWidth"
+        app:layout_constraintVertical_bias="0.428" />
 
     <EditText
         android:id="@+id/editRise"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:ems="8"
-        android:hint="Rise(In.):"
+        android:ems="4"
         android:inputType="number"
         android:minHeight="48dp"
         android:textColor="@color/white"
-        android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintHorizontal_bias="0.762"
         app:layout_constraintStart_toEndOf="@+id/editWidth"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/RiseTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Rise(In.):"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/editRise"
+        app:layout_constraintStart_toEndOf="@+id/editWidth"
+        app:layout_constraintTop_toTopOf="@+id/editRise"
+        app:layout_constraintVertical_bias="0.428" />
 
     <EditText
         android:id="@+id/editRun"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
-        android:ems="8"
-        android:hint="Run(In.):"
+        android:ems="4"
         android:inputType="number"
         android:minHeight="48dp"
         android:textColor="@color/white"
-        android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/editWidth"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/editWidth"
         app:layout_constraintTop_toBottomOf="@+id/editWidth" />
+
+    <TextView
+        android:id="@+id/RunTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="Run(In.):"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/editRun"
+        app:layout_constraintEnd_toStartOf="@+id/editRun"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editRun"
+        app:layout_constraintVertical_bias="0.38" />
 
     <EditText
         android:id="@+id/editSteps"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
-        android:ems="8"
-        android:hint="Steps:"
+        android:ems="4"
         android:inputType="number"
         android:minHeight="48dp"
         android:textColor="@color/white"
-        android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/editRise"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/editRise"
         app:layout_constraintTop_toBottomOf="@+id/editRise" />
 
+    <TextView
+        android:id="@+id/StepsTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Steps:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/editSteps"
+        app:layout_constraintEnd_toStartOf="@+id/editSteps"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/editRun"
+        app:layout_constraintTop_toTopOf="@+id/editSteps"
+        app:layout_constraintVertical_bias="0.38" />
+
     <EditText
         android:id="@+id/editPlatformD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="196dp"
-        android:ems="8"
-        android:hint="PlatFormDepth(Ft)"
+        android:layout_marginTop="204dp"
+        android:ems="4"
         android:inputType="number"
         android:minHeight="48dp"
         android:textColor="@color/white"
-        android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/editSteps"
-        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintHorizontal_bias="0.357"
         app:layout_constraintStart_toStartOf="@+id/editRun"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/PlatFDTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:ems="4"
+        android:text="PlatFormDepth(Ft):"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/editPlatformD"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editPlatformD"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/calcButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="28dp"
         android:text="Calculate"
         app:layout_constraintEnd_toEndOf="@+id/editPlatformD"
-        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/editPlatformD"
         app:layout_constraintTop_toBottomOf="@+id/editPlatformD" />
 
@@ -148,6 +209,16 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/txtBags60"
         app:layout_constraintTop_toBottomOf="@+id/txtBags60" />
+
+
+
+
+
+
+
+
+
+
 
 
 </android.support.constraint.ConstraintLayout>
