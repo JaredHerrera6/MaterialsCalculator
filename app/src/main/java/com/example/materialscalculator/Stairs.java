@@ -77,7 +77,7 @@ public class Stairs extends AppCompatActivity implements View.OnClickListener{
     }
     @Override
     public void onClick(View v){
-        //Gets and assigns the inserted values from the interface to a varibale
+        //Gets and assigns the inserted values from the interface to a variable
         EditText editWidth = findViewById(R.id.editWidth);
         EditText editRise = findViewById(R.id.editRise);
         EditText editRun = findViewById(R.id.editRun);
@@ -96,7 +96,7 @@ public class Stairs extends AppCompatActivity implements View.OnClickListener{
         double StairVolume = getVUnderStairs();
         //Gets the Cubic ft of the Platform
         double PlatVolume = getVUnderPlat();
-        //Adds the prevously Calculated Cubic Ft
+        //Adds the previously Calculated Cubic Ft
         // to get The total Cubic ft of the set of Stairs
         Cubicft = StairVolume + PlatVolume;
         //Calculates the Needed Concrete
