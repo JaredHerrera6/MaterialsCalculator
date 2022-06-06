@@ -16,6 +16,7 @@
         android:ems="5"
         android:inputType="number"
         android:textColor="@color/white"
+        android:backgroundTint="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -37,6 +38,7 @@
         android:layout_marginTop="40dp"
         android:ems="5"
         android:textColor="@color/white"
+        android:backgroundTint="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/editLength"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/editLength"
@@ -61,6 +63,7 @@
         android:layout_marginTop="40dp"
         android:ems="5"
         android:textColor="@color/white"
+        android:backgroundTint="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/editThickness"
         app:layout_constraintStart_toStartOf="@+id/editThickness"
         app:layout_constraintTop_toBottomOf="@+id/editThickness" />
